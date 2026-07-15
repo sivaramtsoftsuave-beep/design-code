@@ -506,8 +506,40 @@ h3 span {
 
 .process-list {
 
+    position: relative;
+
     display: flex;
     flex-direction: column;
+
+    padding-left: 26px;
+}
+
+.process-track {
+
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 0;
+
+    width: 2px;
+
+    background: var(--border);
+    border-radius: 2px;
+}
+
+.process-track-fill {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 0%;
+
+    background: var(--primary);
+    border-radius: 2px;
+
+    transition: height .15s linear;
 }
 
 .process-step {
@@ -524,6 +556,22 @@ h3 span {
     border-bottom: 1px solid var(--border);
 }
 
+/* Scroll-reveal: only engages once JS confirms it can animate back out smoothly */
+.process-list.anim-ready .process-step {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s cubic-bezier(.2, .7, .3, 1), transform .7s cubic-bezier(.2, .7, .3, 1);
+}
+
+.process-list.anim-ready .process-step:nth-child(2) { transition-delay: 90ms; }
+.process-list.anim-ready .process-step:nth-child(3) { transition-delay: 180ms; }
+.process-list.anim-ready .process-step:nth-child(4) { transition-delay: 270ms; }
+
+.process-list.anim-ready .process-step.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .process-number {
 
     flex-shrink: 0;
@@ -532,9 +580,15 @@ h3 span {
     font-style: italic;
     font-weight: 600;
     font-size: 1.8rem;
-    color: var(--primary);
+    color: var(--border-strong);
 
     width: 70px;
+
+    transition: color .5s ease .1s;
+}
+
+.process-list.anim-ready .process-step.in-view .process-number {
+    color: var(--primary);
 }
 
 .process-body h3 {
