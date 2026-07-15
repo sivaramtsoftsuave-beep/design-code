@@ -95,7 +95,7 @@ header {
 
     font-size: 2rem;
     font-weight: 800;
-    color: #3E3EF8;
+    color: #FF6C3A;
 }
 
 .nav-links {
@@ -114,7 +114,7 @@ header {
 .nav-links a:hover,
 .nav-links .active {
 
-    color: #3E3EF8;
+    color: #FF6C3A;
 }
 
 .nav-buttons {
@@ -135,7 +135,7 @@ header {
 
     padding: 16px 28px;
 
-    background: #3E3EF8;
+    background: #FF6C3A;
     color: white;
 
     border-radius: 999px;
@@ -162,9 +162,9 @@ header {
 
     padding: 16px 28px;
 
-    border: 1px solid #3E3EF8;
+    border: 1px solid #FF6C3A;
 
-    color: #3E3EF8;
+    color: #FF6C3A;
 
     border-radius: 999px;
 
@@ -173,7 +173,7 @@ header {
 
 .btn-outline:hover {
 
-    background: #3E3EF8;
+    background: #FF6C3A;
     color: white;
 }
 
