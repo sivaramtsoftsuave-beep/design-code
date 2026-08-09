@@ -63,7 +63,7 @@
   .cs-section__tag{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);}
   .cs-eyebrow{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--restore);font-weight:600;margin-bottom:18px;display:block;}
   .cs-btn{
-    font-family:'IBM Plex Mono',monospace;font-size:13px;padding:13px 22px;border-radius:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:16px;padding:13px 22px;border-radius:8px;
     display:inline-block;letter-spacing:0.02em;border:1px solid transparent;cursor:pointer;
     position:relative;
     transition:transform .22s cubic-bezier(.4,0,.2,1),box-shadow .22s ease,
@@ -522,6 +522,7 @@
     <div class="cs-solution">
       <p>A cloud-based data protection solution was developed to enable secure and seamless access to a centralized identity management portal. The platform supports comprehensive management of tenant data and backup operations for organizational users. This integration ensures users can securely access, monitor, and manage backup, restore, and version history of critical identity-related information. Leveraging an intuitive dashboard and real-time monitoring, the solution empowers IT teams to maintain data integrity and respond swiftly to anomalies.</p>
     </div>
+    <button type="button" class="alpha-button bg-gradient-to-r from-brand-700 to-brand-800 border-[3px] border-white text-white  min-h-[75px] disabled:opacity-70 disabled:cursor-not-allowed"><span class="text-[20px] font-[400] text-white">Contact Us</span><span class="flex items-center"><svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="17" cy="17" r="17" fill="white"></circle><path d="M26.1907 17.7896C26.5812 17.399 26.5812 16.7659 26.1907 16.3754L19.8268 10.0114C19.4362 9.62087 18.8031 9.62087 18.4125 10.0114C18.022 10.4019 18.022 11.0351 18.4125 11.4256L24.0694 17.0825L18.4125 22.7393C18.022 23.1298 18.022 23.763 18.4125 24.1535C18.8031 24.5441 19.4362 24.5441 19.8268 24.1535L26.1907 17.7896ZM8.48361 17.0825V18.0825H25.4836V17.0825V16.0825H8.48361V17.0825Z" fill="black"></path></svg></span></button>
   </div>
 </section>
 
