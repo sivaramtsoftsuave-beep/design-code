@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cloud-based Data & Backup Operations Platform — Case Study | Soft Suave</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@1&display=swap" rel="stylesheet">
 
 <!--
   ============================================================================
@@ -48,12 +49,12 @@
   html{scroll-behavior:smooth;}
   body{
     margin:0;background:var(--bg);color:var(--ink);
-    font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;
+    font-family:'Roboto',sans-serif;font-size:16px;line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
   .head-highlight{color:var(--restore);}
-  h1,h2,h3{font-family:'Space Grotesk',sans-serif;margin:0;letter-spacing:-0.01em;}
-  .mono{font-family:'IBM Plex Mono',monospace;}
+  h1,h2,h3{font-family:'Roboto',sans-serif;margin:0;letter-spacing:-0.01em;}
+  .mono{font-family:'Roboto',sans-serif;}
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
   .cs-wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,56px);}
@@ -62,7 +63,7 @@
   .cs-section__head h2{font-size:26px;font-weight:600;}
   .cs-section__tag{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);}
   .cs-eyebrow{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--restore);font-weight:600;margin-bottom:18px;display:block;}
-  .cs-btn{font-family:'IBM Plex Mono',monospace;font-size:13px;padding:13px 22px;border-radius:2px;display:inline-block;letter-spacing:0.02em;border:1px solid transparent;cursor:pointer;}
+  .cs-btn{font-family:'Roboto',sans-serif;font-size:13px;padding:13px 22px;border-radius:2px;display:inline-block;letter-spacing:0.02em;border:1px solid transparent;cursor:pointer;}
   .cs-btn--primary{background:var(--restore);color:#fff;}
   .cs-btn--ghost{border:1px solid var(--line);color:var(--ink);}
   .cs-btn--ghost-dark{border:1px solid #3A4550;color:#fff;}
@@ -93,7 +94,7 @@
   .cs-toc-rail__list li:last-child{margin-bottom:0;}
   .cs-toc-rail__list a{
     position:relative;z-index:1;display:flex;align-items:center;gap:14px;
-    font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;
+    font-family:'Roboto',sans-serif;font-size:14px;font-weight:500;
     color:var(--ink-faint);transition:color .2s ease;
   }
   .cs-toc-rail__list a:hover{color:var(--ink);}
@@ -102,7 +103,7 @@
     background:var(--panel);border:2px solid var(--line);
     transition:background .2s ease,border-color .2s ease,box-shadow .2s ease;
   }
-  .cs-toc-rail__list a.active{color:var(--restore);font-weight:600;}
+  .cs-toc-rail__list a.active{color:var(--restore);font-weight:600;font-size:18px;}
   .cs-toc-rail__list a.active .dot{
     background:var(--restore);border-color:var(--restore);box-shadow:0 0 0 4px var(--restore-bg);
   }
@@ -177,16 +178,17 @@
     display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;
   }
   .cs-hero__eyebrow{
-    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+    font-family:'Roboto',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
     color:#7FE0BE;font-weight:600;margin-bottom:20px;display:inline-flex;align-items:center;gap:8px;
   }
   .cs-hero__eyebrow::before{content:'';width:16px;height:1px;background:#7FE0BE;display:inline-block;}
   .cs-hero h1{font-size:clamp(30px,4.4vw,46px);font-weight:600;line-height:1.12;margin-bottom:18px;color:#fff;}
-  .cs-hero p{color:#C3CDD5;font-size:16.5px;max-width:520px;margin-bottom:26px;}
+  .cs-hero__subtitle{display:block;font-size:24px;line-height:1.25;margin:8px 0 0;color:#fff;font-weight:500;letter-spacing:0;}
+  .cs-hero p{color:#C3CDD5;font-size:18px;max-width:520px;margin-bottom:26px;}
 
   .cs-hero__tags{margin-bottom:26px;}
   .cs-hero__category{
-    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.03em;
+    font-family:'Roboto',sans-serif;font-size:11.5px;letter-spacing:.03em;
     color:#EAF4F0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
     padding:7px 14px;border-radius:999px;display:inline-block;backdrop-filter:blur(6px);
   }
@@ -200,7 +202,10 @@
     padding:8px 14px 8px 10px;border-radius:10px;backdrop-filter:blur(6px);
     font-size:13px;font-weight:500;color:#EDF1F3;
   }
-  .plat-icon svg{width:16px;height:16px;stroke:#7FE0BE;flex:0 0 auto;}
+  .plat-icon .material-symbols-rounded{
+    font-size:18px;color:#7FE0BE;line-height:1;flex:0 0 auto;
+    font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 20;
+  }
 
   /* ---- reusable hero visual: framed image ------------------------------
      Reusable: swap the <img> inside .cs-mock__frame for any project shot —
@@ -210,7 +215,7 @@
   .cs-mock__float{
     position:absolute;z-index:3;display:flex;align-items:center;gap:8px;
     background:rgba(16,21,27,.85);color:#F3F6F8;border:1px solid rgba(255,255,255,.12);
-    border-radius:10px;padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:11px;
+    border-radius:10px;padding:9px 13px;font-family:'Roboto',sans-serif;font-size:11px;
     box-shadow:0 16px 30px -10px rgba(0,0,0,.5);backdrop-filter:blur(8px);white-space:nowrap;
   }
   .cs-mock__float--top{top:-14px;left:-14px;}
@@ -245,7 +250,7 @@
      requirements). Duplicate an <li> to add another line item. ----------- */
   .cs-issue-list{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);overflow:hidden;}
   .cs-issue-list__head{
-    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.06em;
+    font-family:'Roboto',sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em;
     padding:12px 20px;border-bottom:1px solid var(--line);background:#FF6C3A;color:#fff;
   }
   .cs-issue-list__head--minus{color:var(--flag);background:var(--flag-bg);}
@@ -253,7 +258,7 @@
   .cs-issue-list ul{list-style:none;margin:0;padding:0;}
   .cs-issue-list li{display:flex;gap:12px;padding:13px 20px;border-bottom:1px solid var(--line);}
   .cs-issue-list li:last-child{border-bottom:none;}
-  .cs-issue-list .sym{flex:0 0 14px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;}
+  .cs-issue-list .sym{flex:0 0 14px;font-family:'Roboto',sans-serif;font-weight:600;font-size:14px;}
   .cs-issue-list--minus .sym{color:var(--flag);}
   .cs-issue-list--plus .sym{color:var(--restore);}
   .cs-issue-list .txt{font-size:14.5px;color:var(--ink);}
@@ -283,7 +288,7 @@
   /* COMPONENT: feature grid (#features) ------------------------------------ */
   .cs-features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
   .cs-features__card{background:var(--panel);padding:28px 24px;}
-  .cs-features__tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--restore);background:var(--restore-bg);padding:3px 8px;display:inline-block;margin-bottom:16px;border-radius:2px;}
+  .cs-features__tag{font-family:'Roboto',sans-serif;font-size:11px;letter-spacing:0.06em;color:var(--restore);background:var(--restore-bg);padding:3px 8px;display:inline-block;margin-bottom:16px;border-radius:2px;}
   .cs-features__card h3{font-size:17px;font-weight:600;margin-bottom:8px;}
   .cs-features__card p{font-size:14px;color:var(--ink-soft);margin:0;}
   @media (max-width:760px){ .cs-features{grid-template-columns:1fr;} }
@@ -295,21 +300,30 @@
   .cs-metric .label{font-size:14.5px;font-weight:500;}
   .cs-metric .track{height:6px;background:var(--line);border-radius:3px;overflow:hidden;}
   .cs-metric .fill{height:100%;background:var(--restore);width:0;transition:width 1.1s cubic-bezier(.4,0,.2,1);}
-  .cs-metric .num{font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:600;text-align:right;color:var(--restore);}
+  .cs-metric .num{font-family:'Roboto',sans-serif;font-size:18px;font-weight:600;text-align:right;color:var(--restore);}
   @media (max-width:640px){ .cs-metric{grid-template-columns:110px 1fr 50px;gap:12px;} }
 
   /* COMPONENT: download banner (#download) --------------------------------- */
-  .cs-download{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:40px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;}
+  .cs-download {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 40px;
+    display: grid;
+    grid-template-rows: 1.3fr;
+    gap: 16px;
+    align-items: center;
+}
   .cs-download p{color:var(--ink-soft);font-size:15px;margin:10px 0 0;}
   .cs-download__form{display:grid;gap:10px;}
-  .cs-download__form input{font-family:'Inter',sans-serif;font-size:14px;padding:12px 14px;border:1px solid var(--line);border-radius:2px;background:var(--bg);color:var(--ink);}
+  .cs-download__form input{font-family:'Roboto',sans-serif;font-size:14px;padding:12px 14px;border:1px solid var(--line);border-radius:2px;background:var(--bg);color:var(--ink);}
   .cs-download__form input::placeholder{color:var(--ink-faint);}
   .cs-download__action{display:flex;align-items:center;justify-content:center;}
   .cs-download__action .cs-btn{width:100%;text-align:center;padding-top:16px;padding-bottom:16px;}
   @media (max-width:760px){ .cs-download{grid-template-columns:1fr;} }
 
   /* COMPONENT: related case studies — auto-playing carousel (#related) -----
-     One card in view at a time. Autoplay advances every 2s and loops
+      One card in view at a time. Autoplay advances every 1.5s and loops
      seamlessly (a clone of the first slide sits at the end of the track;
      on reaching it the track snaps back to slide 0 with no visible jump).
      Dots + arrows allow manual control; hovering the viewport pauses
@@ -328,7 +342,7 @@
   .cs-related-carousel__body h3{font-size:21px;font-weight:600;}
   .cs-related-carousel__body p{font-size:14.5px;color:var(--ink-soft);margin:0;max-width:480px;}
   .cs-related-carousel__link{
-    font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--restore);margin-top:6px;
+    font-family:'Roboto',sans-serif;font-size:12.5px;color:var(--restore);margin-top:6px;
     display:inline-flex;align-items:center;gap:4px;width:max-content;
     text-shadow:0 0 0 rgba(31,138,112,0);
     transition:color .25s ease,text-shadow .25s ease,gap .25s ease;
@@ -361,7 +375,7 @@
   /* COMPONENT: consultation (#consult) -------------------------------------- */
   .cs-consult{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
   .cs-consult__form{display:grid;gap:12px;}
-  .cs-consult__form input,.cs-consult__form textarea{font-family:'Inter',sans-serif;font-size:14px;padding:12px 14px;border:1px solid var(--line);border-radius:2px;background:var(--panel);color:var(--ink);width:100%;}
+  .cs-consult__form input,.cs-consult__form textarea{font-family:'Roboto',sans-serif;font-size:14px;padding:12px 14px;border:1px solid var(--line);border-radius:2px;background:var(--panel);color:var(--ink);width:100%;}
   .cs-consult__form textarea{min-height:90px;resize:vertical;}
   .cs-consult__card{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:24px;}
   .cs-consult__person{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
@@ -420,7 +434,7 @@
      Duplicate this whole <header>, swap the three pieces, and it's a new hero. -->
 <header class="cs-hero" id="hero">
   <div class="cs-hero__bg" aria-hidden="true">
-    <img src="https://www.softsuave.com/assets/images/CS01.webp" alt="">
+    <img src="https://www.softsuave.com/assets/images/vehicle-intelligence-cover.webp" alt="">
   </div>
   <div class="cs-hero__overlay" aria-hidden="true"></div>
   <div class="cs-hero__grid-lines" aria-hidden="true"></div>
@@ -432,7 +446,7 @@
     <!-- (b) content -->
     <div class="cs-hero__content">
       <span class="cs-hero__eyebrow">Case Study</span>
-      <h1>Cloud-based Data &amp; <span class="head-highlight">Backup Operations Platform</span></h1>
+      <h1>Cloud-based Data &amp; <span class="head-highlight">Backup Operations Platform</span><span class="cs-hero__subtitle">IT Teams Centeralized Portal.</span></h1>
       <p>Soft Suave developed a cloud-based data protection platform that simplifies identity data management and backup operations for enterprise tenants — giving IT teams a centralized portal built for compliance, traceability, and reliability.</p>
 
       <div class="cs-hero__tags">
@@ -443,11 +457,17 @@
         <span class="cs-hero__platforms-label">Supported Platform</span>
         <div class="cs-hero__platform-icons">
           <span class="plat-icon" title="Web">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>
+            <span class="material-symbols-rounded" aria-hidden="true">language</span>
             Web
           </span>
-          <!-- Reusable: copy the .plat-icon block above for iOS / Android / Desktop
-               when a future case study supports more than one platform. -->
+          <span class="plat-icon" title="Android">
+            <span class="material-symbols-rounded" aria-hidden="true">android</span>
+            Android
+          </span>
+          <span class="plat-icon" title="iOS">
+            <span class="material-symbols-rounded" aria-hidden="true">phone_iphone</span>
+            iOS
+          </span>
         </div>
       </div>
     </div>
@@ -641,7 +661,7 @@
 </section>
 
 <!-- ======================= 09. RELATED CASE STUDIES — carousel (#related) =======================
-     One card at a time, auto-advances every 2s and loops forever. Reusable:
+      One card at a time, auto-advances every 1.5s and loops forever. Reusable:
      duplicate a .cs-related-carousel__slide inside the track (and its
      matching dot below) to add another case study; the last real slide is
      mirrored as a hidden clone at the very end of the track so the loop
@@ -684,7 +704,7 @@
             </div>
           </a>
 
-          <a class="cs-related-carousel__slide" href="https://www.softsuave.com/case-study-online-consultation-platform-for-doctors">
+          <a class="cs-related-carousel__slide" href="https://www.softsuave.com/case-study-telehealth-consultation-platform-for-doctors">
             <div class="cs-related-carousel__figure"><img src="https://www.softsuave.com/assets/images/tele-app.png" alt="Custom Telehealth App for Doctor Consultation"></div>
             <div class="cs-related-carousel__body">
               <h3>Custom Telehealth App for Doctor Consultation</h3>
@@ -925,7 +945,7 @@
     const slides = Array.from(track.children);
     const realCount = slides.length - 1; // last slide is the clone of slide 1
     let index = 0;
-    const AUTOPLAY_MS = 2000;
+    const AUTOPLAY_MS = 3500;
     const TRANSITION_MS = 600;
     let timer = null;
 
@@ -987,6 +1007,7 @@
     });
 
     function startAutoplay() {
+      if (timer) return;
       timer = setInterval(next, AUTOPLAY_MS);
     }
     function stopAutoplay() {

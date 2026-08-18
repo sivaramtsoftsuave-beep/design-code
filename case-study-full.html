@@ -59,7 +59,7 @@
   .cs-wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,56px);}
   .cs-section{padding:64px 0;border-bottom:1px solid var(--line);}
   .cs-section__head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px;flex-wrap:wrap;gap:10px;}
-  .cs-section__head h2{font-size:26px;font-weight:600;}
+  .cs-section__head h2{font-size:32px;font-weight:600;}
   .cs-section__tag{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);}
   .cs-eyebrow{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--restore);font-weight:600;margin-bottom:18px;display:block;}
   .cs-btn{font-family:'IBM Plex Mono',monospace;font-size:13px;padding:13px 22px;border-radius:2px;display:inline-block;letter-spacing:0.02em;border:1px solid transparent;cursor:pointer;}
@@ -102,7 +102,7 @@
     background:var(--panel);border:2px solid var(--line);
     transition:background .2s ease,border-color .2s ease,box-shadow .2s ease;
   }
-  .cs-toc-rail__list a.active{color:var(--restore);font-weight:600;}
+  .cs-toc-rail__list a.active{font-size:18px;color:var(--restore);font-weight:600;}
   .cs-toc-rail__list a.active .dot{
     background:var(--restore);border-color:var(--restore);box-shadow:0 0 0 4px var(--restore-bg);
   }
@@ -122,7 +122,7 @@
     .cs-toc-rail__list a{
       padding:7px 13px;border-radius:999px;border:1px solid var(--line);font-size:12.5px;
     }
-    .cs-toc-rail__list a.active{background:var(--restore-bg);border-color:var(--restore);}
+    .cs-toc-rail__list a.active{background:var(--restore-bg);border-color:var(--restore);font-size:18px;}
     .cs-toc-rail__list a .dot{width:7px;height:7px;}
   }
 
@@ -307,7 +307,7 @@
   @media (max-width:760px){ .cs-download{grid-template-columns:1fr;} }
 
   /* COMPONENT: related case studies — auto-playing carousel (#related) -----
-     One card in view at a time. Autoplay advances every 2s and loops
+      One card in view at a time. Autoplay advances every 1.5s and loops
      seamlessly (a clone of the first slide sits at the end of the track;
      on reaching it the track snaps back to slide 0 with no visible jump).
      Dots + arrows allow manual control; hovering the viewport pauses
@@ -448,7 +448,7 @@
       <div class="cs-mock__float cs-mock__float--top"><span class="pulse"></span>v2.4.1 · Synced 2m ago</div>
 
       <div class="cs-mock__frame">
-        <img src="https://www.softsuave.com/assets/images/CS01.webp" alt="Cloud-based Data and Backup Operations Platform">
+        <img src="/image/Container.png" alt="Cloud-based Data and Backup Operations Platform">
       </div>
 
       <div class="cs-mock__float cs-mock__float--bottom">✓ Restore complete — Object #4471</div>
@@ -635,7 +635,7 @@
 </section>
 
 <!-- ======================= 09. RELATED CASE STUDIES — carousel (#related) =======================
-     One card at a time, auto-advances every 2s and loops forever. Reusable:
+      One card at a time, auto-advances every 1.5s and loops forever. Reusable:
      duplicate a .cs-related-carousel__slide inside the track (and its
      matching dot below) to add another case study; the last real slide is
      mirrored as a hidden clone at the very end of the track so the loop
@@ -678,7 +678,7 @@
             </div>
           </a>
 
-          <a class="cs-related-carousel__slide" href="https://www.softsuave.com/case-study-online-consultation-platform-for-doctors">
+          <a class="cs-related-carousel__slide" href="https://www.softsuave.com/case-study-telehealth-consultation-platform-for-doctors">
             <div class="cs-related-carousel__figure"><img src="https://www.softsuave.com/assets/images/tele-app.png" alt="Custom Telehealth App for Doctor Consultation"></div>
             <div class="cs-related-carousel__body">
               <h3>Custom Telehealth App for Doctor Consultation</h3>
@@ -919,7 +919,7 @@
     const slides = Array.from(track.children);
     const realCount = slides.length - 1; // last slide is the clone of slide 1
     let index = 0;
-    const AUTOPLAY_MS = 2000;
+    const AUTOPLAY_MS = 1500;
     const TRANSITION_MS = 600;
     let timer = null;
 
@@ -981,6 +981,7 @@
     });
 
     function startAutoplay() {
+      if (timer) return;
       timer = setInterval(next, AUTOPLAY_MS);
     }
     function stopAutoplay() {
