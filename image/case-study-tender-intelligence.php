@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tender Intelligence{Case Study}</title>
+    <title>Neurora Behavioral Intelligence{Case Study}</title>
     <meta name="description"
         content="See how Soft Suave built Neurora's Behavioral Intelligence platform, fusing video, gaze, and heart-rate data into automated driver safety scores.">
     <meta name="robots" content="noindex,nofollow">
@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="/new-assets/common/css/case-study-new.css">
     <link rel="stylesheet" as="style" href="/resources/rework-css/case-study-form.css">
     <!-- Required Links -->
-        
+        <?php include("new-common-css.php"); ?>
         <link rel="preload stylesheet" as="style" href="resources/rework-css/awards-recognition-new.css">
         <link rel="preload stylesheet" as="style" type="text/css" href="/new-site/resources/js/slick/slick-common.css">
         <link rel="stylesheet" href="case-study-inner.css">
         <link rel="stylesheet" href="case-study-update.css">
         <link rel="stylesheet" href="/new-assets/common/css/case-study-new.css">
-        
+        <?php include("tracking-codes.php"); ?>
     <!-- Schema.org for Google -->
     <meta property="og:site_name" content="Soft Suave Technologies" />
     <meta property="og:type" content="Website" />
@@ -36,14 +36,13 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> -->
   <link rel="preload stylesheet" as="style" type="text/css" href="/new-site/resources/js/slick/slick-common.css">
-  <link rel="stylesheet" type="text/css" href="case-study-update2.css">
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> -->
     <!-- Schema.org for Google -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "NewsArticle",
-        "headline": "Tender Intelligence",
+        "headline": "Neurora Behavioral Intelligence",
         "image": [
             "https://www.softsuave.com/assets/case-studies/NI-sample-og.webp"
         ],
@@ -60,19 +59,49 @@
     <!-- <link rel="preload stylesheet" as="style" type="text/css" href="/new-site/resources/js/slick/slick-common.css"> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> -->
     <link rel="canonical" href="https://www.softsuave.com/case-study-neurora-behavioral-intelligence">
-    
+    <?php include("common-css.php"); ?>
     <style>
-    
+    /* Analytics Circle Component */
+
+   .back-banner{
+    background: url(/assets/case-studies/COVER_NI.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sub-tag{
+    margin: 0px 0px 16px;
+    color: #fff;
+}
+.sub-content{
+    margin: 0px 0px 16px;
+    color: #FF6C3A;
+    font-size:14px;
+}
+.cs-solution__figure {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 0;
+    width: 100%;
+}
+.cs-solution__figure img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
     </style>
 </head>
  
 <body class="bg">
-    
+    <?php include("header-menu.php"); ?>
 
     <body data-bs-spy="scroll" data-bs-target="#navbar-example">
         <!--Modal started-->
         <div class="modal fade" id="consult_Popup" role="dialog">
-            <div class="modal-dialog consult_dialog"  id='NEURORA_BEHAVIORAL_INTELLIGENCE' data-case-study='Neurora Behavioral Intelligence' data-case-study-url='https://www.softsuave.com/assets/case-studies/Neurora_Labs_case_study.pdf'>
+            <div class="modal-dialog consult_dialog"  id='NEURORA_BEHAVIORAL_INTELLIGENCE' data-case-study='Neurora Behavioral Intelligence'>
                 <!-- Modal content-->
                 <?php include('case-study-download-form.php') ?>
             </div>
@@ -84,14 +113,13 @@
                         <div class="banner_content mb-5 mb-lg-0">
                             <h1 class="text-font text-white fw-black mb-3">Neurora
                             <span> Behavioral Intelligence</span></h1>
-                            <h3 class="sub-tag">An AI-Powered Contract & Tender Management Lifecycle Platform</h3>
-                            <p class="banner_txt lh-2 text-justify text-white mb-3">From Contract Strategy to closure — AI-assisted drafting, deterministic evaluation and an
-immutable, timestamped audit trail across a ten-phase tender lifecycle. Delivered entirely
-on-premises for a leading LNG operator in Oman, with sealed-bid integrity preserved and
-full English and Arabic support throughout.</p>
+                            <h3 class="sub-tag">A Platform for Driver Attention, Stress and Safety</h3>
+                            <p class="banner_txt lh-2 text-justify text-white mb-3">Fusing synchronized driving video, eye-gaze and heart-rate data into automated behavioral
+scores — showing researchers, fleets and driving schools not just what a driver did, but
+where they looked, what they missed and when stress took over.</p>
                             <div class="col-6 col-md-3 health-head">
                                 <div class="banner-con">
-                                    <h2 class="text-white">Energy / Oil & Gas</h2>
+                                    <h2 class="text-white">Transportation Industry</h2>
                                 </div>
                             </div>
                             <div class="cate py-3">
@@ -162,6 +190,8 @@ full English and Arabic support throughout.</p>
                                                     class="btn btn_primary btn_light  fw-boldknow-more-button"
                                                     data-toggle="modal" data-target="#consult_Popup">Download<i
                                                         class="fa fa-arrow-right"></i></button>
+                                                <input type="hidden" id="case_study_url"
+                                                    value="https://www.softsuave.com/assets/case-studies/Neurora_Labs_case_study.pdf">
                                             </span>
 
                                         </div>
@@ -179,32 +209,33 @@ full English and Arabic support throughout.</p>
                         <div id="section1">
                             <div class="services_box-1 py-4">
                                 <h4 class="sub-content"><b>01 — ABOUT THE CLIENT</b></h4>
-                                <h2 class="h3_title service_box_title text-dark fw-bold my-4">Procurement at enterprise scale</h2>
-                                <p class="service_box_details text-gray text-justify lh-lg mb-2">A leading LNG operator in Oman runs complex, high-value tenders across its supply chain
-under strict governance. It set out to build an AI-powered contract and tender management
-platform spanning the full lifecycle — from Contract Strategy through evaluation and award to
-closure — while keeping every record on-premises, preserving sealed-bid integrity and
-maintaining an immutable audit trail at every step. Five stakeholder personas, two languages
-and zero tolerance for untraceable decisions set the bar for delivery.</p>
+                                <h2 class="h3_title service_box_title text-dark fw-bold my-4">Where driver safety is still judged by eye</h2>
+                                <p class="service_box_details text-gray text-justify lh-lg mb-2">Neurora Labs is building a Behavioral Intelligence Platform for organizations that need to understand how people actually drive. Its users are driving schools, fleet safety and risk teams, academic and commercial driving-behavior researchers, and automotive safety engineers. Each of them depends on evidence from real driving sessions—video, gaze, heart rate—and each has been forced to rely on an instructor's memory and judgment to interpret it.</p>
+                                <!-- <p class="service_box_details text-gray text-justify lh-lg">Their goal was to create a
+                                    platform that is smarter to cooperate across municipalities-across health
+                                    professionals and with citizens.</p> -->
                             </div>
                         </div>
 
                         <div id="section2">
                             <div class="services_box-1 py-4">
                                 <h4 class="sub-content"><b>02 — THE CHALLENGE</b></h4>
-                                <h2 class="h3_title service_box_title text-dark fw-bold my-4">Four problems across the tender lifecycle</h2>
+                                <h2 class="h3_title service_box_title text-dark fw-bold my-4">Four gaps between the drive and the insight</h2>
                                 <p class="service_box_details text-gray text-justify lh-lg mb-2">Understanding real driver behavior is difficult — attention, stress, and hazard response happen in an instant and leave no objective trace. Building a reliable behavioral intelligence system required fusing video, gaze, and physiological data into one accurate, real-time picture.</p>
+                                <!-- <p class="service_box_details text-gray text-justify lh-lg mb-2">Modules used for
+                                    implementing the below features to the solution are</p>
+                                <div class="img-section">
+                                    <img width="100%" height="100%" src="assets/images/chalenge.webp"
+                                        alt="EXISTING-CHALLENGES">
+                                </div> -->
                                 <div class="services_box-1 py-4">
                                     <div class="row justify-content-center">
                                         <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
                                             <div class=" box-text">
                                                 <div class="services_list text-form">
                                                     <div class="content-box">
-                                                        <h3 class="box-point mb-2 ">Slow, manual tender cycles</h3>
-                                                        <p class="para-item ">Multi-stage tendering with hand-drafted
-documents and manual handoffs stretched
-cycle times and made progress hard to
-trace.</p>
+                                                        <h3 class="box-point mb-2 ">Manual, after-the-fact review</h3>
+                                                        <p class="para-item ">Instructors scored sessions from observation and post-drive recall, so feedback arrived late, and its quality varied with whoever happened to be watching.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -243,6 +274,19 @@ trace.</p>
                                         
                                     </div>
                                 </div>
+                                <!-- <ul class="list-unstyled faq_lists">
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Citizen management:</span> Details of citizens are saved here for reference</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Booking appointments:</span> Citizens can book appointments of specialist doctors using this feature</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Role management:</span> Patients are created by admin and doctor and doctors are in turn created by the super admin with their roles</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Stafi summary:</span> Patients health summaries are documented from the first visit</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Treatment templates:</span> Different health condition templates to ease the communication</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Journal note:</span> Healthcare professional could create a note to the citizen using Journal note with the fields date, title, and a note</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Goal:</span> Citizens can create goals and follow-up to achieve the goal</li>
+                              </ul> -->
+                                <!-- <div class="img-section py-4">
+                                    <img width="100%" height="100%" src="assets/images/challenge-2.webp"
+                                        alt="EXISTING-CHALLENGES">
+                                </div> -->
                             </div>
                         </div>
 
@@ -252,6 +296,10 @@ trace.</p>
                                 <h4 class="sub-content"><b>03 — THE SOLUTION</b></h4>
                                 <h2 class="h3_title service_box_title text-dark fw-bold my-4">One capture-to-insight pipeline, three connected surfaces</h2>
                                <p class="service_box_details text-gray text-justify lh-lg mb-2">Soft Suave is delivering an end-to-end system for Neurora Labs: Neurora Capture records synchronized video, gaze, and heart-rate data; an AWS backend runs SQS-triggered ECS workers for computer vision and scoring; and Neurora Insight, the Neurora Self View driver app, and an admin panel turn the output into decisions.</p>
+                                 <!-- <div class="img-section">
+                                    <img width="100%" height="100%" src="assets/images/chalenge.webp"
+                                        alt="EXISTING-CHALLENGES">
+                                </div> -->
                                 <div class="services_box-1 py-4">
                                     <div class="solution_features">
                                         <div class="feature_item">
@@ -288,6 +336,19 @@ trace.</p>
                                 <blockquote class="quote_card">
                                     <p class="quote_text">"Raw sensor streams in, behavioral scores and plain-language safety insight out — automated end to end, with human-adjustable Areas of Interest."</p>
                                 </blockquote>
+                                <!-- <ul class="list-unstyled faq_lists">
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Citizen management:</span> Details of citizens are saved here for reference</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Booking appointments:</span> Citizens can book appointments of specialist doctors using this feature</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Role management:</span> Patients are created by admin and doctor and doctors are in turn created by the super admin with their roles</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Stafi summary:</span> Patients health summaries are documented from the first visit</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Treatment templates:</span> Different health condition templates to ease the communication</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Journal note:</span> Healthcare professional could create a note to the citizen using Journal note with the fields date, title, and a note</li>
+                                  <li class="list_items text-gray mb-2"><span class="fw-bold text-dark">Goal:</span> Citizens can create goals and follow-up to achieve the goal</li>
+                              </ul> -->
+                                <!-- <div class="img-section py-4">
+                                    <img width="100%" height="100%" src="assets/images/challenge-2.webp"
+                                        alt="EXISTING-CHALLENGES">
+                                </div> -->
                             </div>
                         </div>
                         </div>
@@ -355,11 +416,17 @@ trace.</p>
                                 <h4 class="sub-content"><b>06 — WHY SOFT SUAVE</b></h4>
                                 <h2 class="h3_title service_box_title text-dark fw-bold my-4">Multi-sensor AI, delivered on a proven cadence</h2>
                                 <p class="service_box_details text-gray text-justify lh-lg mb-2">This is not a dashboard project—it is sensor fusion, computer vision, gaze mapping, and behavioral modeling delivered as one production platform. Soft Suave brings 13+ years of engineering depth and a milestone-driven agile cadence: a no-cost proof of concept first, followed by parallel AI and application streams tracked in Jira and Confluence with full client visibility. Every milestone ships to a client-owned repository, backed by layered functional, integration, and regression testing, along with a 90-day post-deployment support period.</p>
+                                <!-- <div class="img-section py-4">
+                                <img width="100%" height="100%" src="assets/images/lop-sc.png" alt="EXISTING-CHALLENGES">
+                            </div> -->
                             </div>
                         </div>
                             <div class="bt-sec text-center text-white py-5">
                                 <div class="container">
                                     <div class="row justify-content-center">
+                                        <div class="col-lg-12">
+                                            <p class="details text-center text-white">Download this practical case study to learn how our Behavioral Intelligence platform fuses video, gaze, and heart-rate data into automated driver safety and stress scores.</p>
+                                        </div>
                                         <div class="col-md-5">
                                             <div class="blockback posrel white_bg">
                                                 <div class="casestudy-section">
@@ -370,6 +437,8 @@ trace.</p>
                                                                 data-toggle="modal"
                                                                 data-target="#consult_Popup">Download Case Study<i
                                                                     class="fa fa-arrow-right"></i></button>
+                                                            <input type="hidden" id="case_study_url"
+                                                                value="https://www.softsuave.com/assets/case-studies/Neurora_Labs_case_study.pdf">
                                                         </span>
                                                     </div>
                                                 </div>
@@ -505,6 +574,10 @@ trace.</p>
                                     </a>
                                 </div>
                             </div>
+
+                            <!-- <audio id="audio_play">
+                                <source src="/assets/audio/madhu-manager.mp3" type="audio/mpeg">
+                            </audio> -->
                         </div>
                     </div>
 
@@ -527,6 +600,9 @@ trace.</p>
                             <div class="con-form">
                                 <div class="col-lg-12 fd-card-enq fd-card-enq-1 w-100">
                                     <form id="footer_contact_form">
+                                        <!--  <span class="fd-h">Get Rough Estimation
+                                        </span>
+                                        <div class="brdr-left-line"></div>-->
                                         <div class="row">
                                             <div class="col-md-6 form-group fd-pad-top">
                                                 <label for="inquiryName-1" class="fd-label">Your Name <span
@@ -760,6 +836,13 @@ trace.</p>
             }
 
             function highlightActiveSection() {
+                // Trigger line sits just below the fixed header, then a fifth
+                // of the viewport height further down, so a section only
+                // takes over once it's genuinely in view. Using the viewport
+                // height (not a flat pixel value) keeps this correct across
+                // phone / tablet / desktop / large-desktop screens, and it's
+                // a deterministic "furthest section reached" pick, so it can
+                // never go backward or land on no highlight at all.
                 var triggerLine = window.scrollY + fixedHeaderHeight() + ($(window).height() * 0.2);
                 var current = sections[0];
                 sections.forEach(function(section) {
@@ -790,6 +873,8 @@ trace.</p>
 
         <script>
         $(document).ready(function() {
+            // Animates each analytics circle from 0% up to its data-percent
+            // once it scrolls into view (fires only once per circle).
             var circles = document.querySelectorAll('.circle-chart[data-percent]');
             if (!circles.length) return;
 
