@@ -264,7 +264,7 @@
      (object-fit: contain), so a wide dashboard screenshot and a tall phone
      screenshot both sit correctly framed without stretching the section. */
   .cs-solution{max-width:max-content;}
-  .cs-solution p{color:var(--ink-soft);font-size:16px;}
+  .cs-solution p{color:var(--ink-soft);font-size:18px;}
   .cs-solution__figure{
     margin:28px 0 0;border:1px solid var(--line);border-radius:var(--radius);
     background:var(--bg);box-shadow:0 24px 44px -26px rgba(16,21,27,.28);
